@@ -892,12 +892,20 @@ namespace Client
 
 				if (ImGui::Button("Load Config"))
 				{
-					Settings::LoadSettings(BaseDir + "\\" + ConfigList[iConfigSelect]);
+					string ConfigFileName = ConfigName;
+					if (ConfigFileName.size() != 0)
+					{
+						Settings::LoadSettings(BaseDir + "\\" + ConfigList[iConfigSelect]);
+					}
 				}
 				ImGui::SameLine();
 				if (ImGui::Button("Save Config"))
 				{
-					Settings::SaveSettings(BaseDir + "\\" + ConfigList[iConfigSelect]);
+					string ConfigFileName = ConfigName;
+					if (ConfigFileName.size() != 0)
+					{
+						Settings::SaveSettings(BaseDir + "\\" + ConfigList[iConfigSelect]);
+					}
 				}
 				ImGui::SameLine();
 				if (ImGui::Button("Refresh Config List"))
