@@ -220,5 +220,4 @@ void CRadar::OnRender()
 			OnRenderPlayer();
 		}
 	}
-	}
 }
