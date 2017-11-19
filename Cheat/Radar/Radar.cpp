@@ -210,11 +210,15 @@ void CRadar::OnRender()
 
 		ImGui::GetStyle().Alpha = prevAlpha;
 	}
-	else if ( !Settings::Radar::rad_Active && Settings::Radar::rad_InGame )
+	else if (!Settings::Radar::rad_Active && Settings::Radar::rad_InGame)
 	{
-		if ( Interfaces::Engine()->IsInGame() )
+		if (Interfaces::Engine()->IsInGame() == false)
+		{
+		}
+		else if (Interfaces::Engine()->IsInGame())
 		{
 			OnRenderPlayer();
 		}
+	}
 	}
 }
