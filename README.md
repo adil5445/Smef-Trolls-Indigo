@@ -1,3 +1,1 @@
-# Smef-Trolls-Indigo
-11/10 paste
-smef.pw
+Indigo being worked on by a few people. http://smef.pw 
